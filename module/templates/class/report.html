@@ -1,0 +1,126 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+
+<style>
+    p:hover{
+        color: #6C63FF;
+    }
+</style>
+
+<div class="container">
+    <h1 class="my-3" style="font-size: 28px;">Report</h1>
+    <div class="row my-3">
+        <div class="col-2">
+            <p onclick="getData('week')" style="cursor:pointer">Weekly report</p>
+            <p onclick="getData('month')" style="cursor:pointer;">Monthly report</p>
+        </div>
+        <div class="col-10" id="chartContainer">
+            <p id="graphTitle" style="text-align: center;">Current week report</p>
+        </div>
+    </div>
+</div>
+
+<!-- chart.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- axios.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+
+// this function request weekly or monthly data from the server
+// and calls createChart method to render those data into the chart
+const getData = (timeFrame) => {
+    
+    graphTitle = document.querySelector("#graphTitle");
+    graphTitle.innerText = `Current ${timeFrame} report`;
+
+    axios.get(`http://127.0.0.1:8000/show_chart/${timeFrame}/`)
+        .then((res)=>{
+            let label = Object.keys(res.data);
+            let data = Object.values(res.data);
+            createChart(label, data);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })   
+}
+
+getData("week");
+
+// this function deletes the chart component, leting the 
+// createChart funtion create another chart at the same div
+const deleteCanvas = () => {
+    try {
+        let canvas = document.querySelector("#myChart")
+        canvas.remove();
+    } catch(err){
+        console.log("no chart element");
+    }    
+}
+
+// this function creates bar chart as per the data received 
+// after the axios request 
+const createChart = (label, data) => {
+
+    deleteCanvas();
+    
+    const canvas = `<canvas id="myChart" width="900" height="400"></canvas>`;
+
+    const canvasContainer = document.querySelector("#chartContainer");
+    canvasContainer.innerHTML += canvas;
+    
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: label,
+        datasets: [{
+            data: data,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+        options: {
+        scales: {
+            x: {
+                display: true,
+                title: {
+                    display:true,
+                    text: "Date",
+                },       
+            },
+            y: {
+                display: true,
+                title: {
+                    display: true,
+                    text: "No. of Students",
+                },
+                beginAtZero: true
+            }
+        },
+        responsive: true,
+        }
+    });
+
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container text-center">
+    {% if messages %}
+        {% for message in messages  %}
+            <div class="alert alert-success" role="alert">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    {% if request.user.is_authenticated %}
+        <h1 style="text-align: left; font-size: 28px; margin-top: 20px; color:#212529;">Hello, {{request.user.first_name}}</h1>
+    {% else %}
+        <h1 style="text-align: left; font-size: 28px; margin-top: 20px; color:#212529">Home</h1>
+    {% endif %}
+
+    <div class="row" style="margin-top: 20px; ">
+        {% if request.user.is_superuser == False %}
+            <div class="col">
+                <div class="card p-3" style="width: 18rem;">
+                    <img src="{% static '/images/attendence.svg' %}" class="card-img-top" alt="..." style="height: 200px; width:auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Attendence</h5>
+                        <p class="card-text">see your classes and manage their attendence from here</p>
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'classes' request.user.id %}" class="btn btn-primary">View Classes</a>
+                        {% else %}
+                            <a href="{% url 'login'%}" class="btn btn-primary">View Classes</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="col">
+            <div class="card p-3" style="width: 18rem;">
+                <img src="{% static '/images/profile.svg' %}" class="card-img-top" alt="..." style="height: 200px; width:auto">
+                <div class="card-body">
+                    <h5 class="card-title">Profile</h5>
+                    <p class="card-text">Manage your personal information from here.</p>
+                    <a href="{% url 'profile' %}" class="btn btn-primary">Manage info</a>
+                </div>
+            </div>
+        </div>
+
+        {% if request.user.is_superuser %}
+
+        <div class="col">
+            <div class="card p-3" style="width: 18rem;">
+                <img src="{% static '/images/report.svg' %}" class="card-img-top" alt="..." style="height: 200px; width:auto">
+                <div class="card-body">
+                    <h5 class="card-title">Report</h5>
+                    <p class="card-text">See all the montly and weekly reports from here.</p>
+                    <a href="{% url 'report' %}" class="btn btn-primary">See Reports</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card p-3" style="width: 18rem;">
+                <img src="{% static '/images/teacher.svg' %}" class="card-img-top" alt="..." style="height: 200px; width:auto">
+                <div class="card-body">
+                    <h5 class="card-title">Register Teacher</h5>
+                    <p class="card-text">Register new teachers </p>
+                    <a href="{% url 'register-teacher' %}" class="btn btn-primary">Register Teacher</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card p-3" style="width: 18rem;">
+                <img src="{% static '/images/add-user.svg' %}" class="card-img-top" alt="..." style="height: 200px; width:auto">
+                <div class="card-body">
+                    <h5 class="card-title">Enroll Student</h5>
+                    <p class="card-text">Enroll new student to class</p>
+                    <a href="{% url 'register-student' %}" class="btn btn-primary">Enroll now</a>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

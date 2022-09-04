@@ -1,0 +1,31 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1 style="text-align: left; font-size: 28px; margin-top: 20px; color:#212529">Your Classes</h1>
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Class</th>
+            <th scope="col">Time</th>
+            <th scope="col">Module Leader</th>
+            <th scope="col"> </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for class in classes %}
+            <tr>
+                <th scope="row">{{class.id}}</th>
+                <td>{{class.name}}</td>
+                <td>{{class.schedule}}</td>
+                <td>{{class.teacher.first_name}} {{class.teacher.last_name}}</td>
+                <td><a href="{% url 'attendence' class.id %}">View Attendence</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

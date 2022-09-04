@@ -1,0 +1,976 @@
+[
+{
+    "model": "module.class",
+    "pk": 1,
+    "fields": {
+        "name": "python",
+        "teacher": 5,
+        "created": "2022-09-02",
+        "schedule": "08:30:00",
+        "students": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            12
+        ]
+    }
+},
+{
+    "model": "module.class",
+    "pk": 2,
+    "fields": {
+        "name": "Django",
+        "teacher": 5,
+        "created": "2022-09-03",
+        "schedule": "09:30:00",
+        "students": [
+            2,
+            3,
+            4,
+            6
+        ]
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 25,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-02"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 26,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-01"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 27,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-03"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 28,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-04"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 29,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-05"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 30,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-06"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 31,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-07"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 32,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-08"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 33,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-09"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 34,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-10"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 35,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-11"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 36,
+    "fields": {
+        "module": 1,
+        "date": "2022-09-12"
+    }
+},
+{
+    "model": "module.classattendence",
+    "pk": 37,
+    "fields": {
+        "module": 2,
+        "date": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 101,
+    "fields": {
+        "classAttendance": 25,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-02"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 102,
+    "fields": {
+        "classAttendance": 25,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-02"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 103,
+    "fields": {
+        "classAttendance": 25,
+        "status": true,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-02"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 104,
+    "fields": {
+        "classAttendance": 25,
+        "status": true,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-02"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 105,
+    "fields": {
+        "classAttendance": 25,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-02"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 106,
+    "fields": {
+        "classAttendance": 25,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-02"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 107,
+    "fields": {
+        "classAttendance": 26,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-01"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 108,
+    "fields": {
+        "classAttendance": 26,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-01"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 109,
+    "fields": {
+        "classAttendance": 26,
+        "status": true,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-01"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 110,
+    "fields": {
+        "classAttendance": 26,
+        "status": true,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-01"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 111,
+    "fields": {
+        "classAttendance": 26,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-01"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 112,
+    "fields": {
+        "classAttendance": 26,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-01"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 113,
+    "fields": {
+        "classAttendance": 27,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-03"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 114,
+    "fields": {
+        "classAttendance": 27,
+        "status": false,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-03"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 115,
+    "fields": {
+        "classAttendance": 27,
+        "status": true,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-03"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 116,
+    "fields": {
+        "classAttendance": 27,
+        "status": false,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-03"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 117,
+    "fields": {
+        "classAttendance": 27,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-03"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 118,
+    "fields": {
+        "classAttendance": 27,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-03"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 119,
+    "fields": {
+        "classAttendance": 28,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 120,
+    "fields": {
+        "classAttendance": 28,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 121,
+    "fields": {
+        "classAttendance": 28,
+        "status": false,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 122,
+    "fields": {
+        "classAttendance": 28,
+        "status": true,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 123,
+    "fields": {
+        "classAttendance": 28,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 124,
+    "fields": {
+        "classAttendance": 28,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 125,
+    "fields": {
+        "classAttendance": 29,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-05"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 126,
+    "fields": {
+        "classAttendance": 29,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-05"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 127,
+    "fields": {
+        "classAttendance": 29,
+        "status": false,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-05"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 128,
+    "fields": {
+        "classAttendance": 29,
+        "status": false,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-05"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 129,
+    "fields": {
+        "classAttendance": 29,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-05"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 130,
+    "fields": {
+        "classAttendance": 29,
+        "status": false,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-05"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 131,
+    "fields": {
+        "classAttendance": 30,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-06"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 132,
+    "fields": {
+        "classAttendance": 30,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-06"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 133,
+    "fields": {
+        "classAttendance": 30,
+        "status": true,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-06"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 134,
+    "fields": {
+        "classAttendance": 30,
+        "status": true,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-06"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 135,
+    "fields": {
+        "classAttendance": 30,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-06"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 136,
+    "fields": {
+        "classAttendance": 30,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-06"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 137,
+    "fields": {
+        "classAttendance": 31,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-07"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 138,
+    "fields": {
+        "classAttendance": 31,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-07"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 139,
+    "fields": {
+        "classAttendance": 31,
+        "status": true,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-07"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 140,
+    "fields": {
+        "classAttendance": 31,
+        "status": true,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-07"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 141,
+    "fields": {
+        "classAttendance": 31,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-07"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 142,
+    "fields": {
+        "classAttendance": 31,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-07"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 143,
+    "fields": {
+        "classAttendance": 32,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-08"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 144,
+    "fields": {
+        "classAttendance": 32,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-08"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 145,
+    "fields": {
+        "classAttendance": 32,
+        "status": false,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-08"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 146,
+    "fields": {
+        "classAttendance": 32,
+        "status": false,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-08"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 147,
+    "fields": {
+        "classAttendance": 32,
+        "status": false,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-08"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 148,
+    "fields": {
+        "classAttendance": 32,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-08"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 149,
+    "fields": {
+        "classAttendance": 33,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-09"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 150,
+    "fields": {
+        "classAttendance": 33,
+        "status": false,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-09"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 151,
+    "fields": {
+        "classAttendance": 33,
+        "status": false,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-09"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 152,
+    "fields": {
+        "classAttendance": 33,
+        "status": true,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-09"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 153,
+    "fields": {
+        "classAttendance": 33,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-09"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 154,
+    "fields": {
+        "classAttendance": 33,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-09"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 155,
+    "fields": {
+        "classAttendance": 34,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-10"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 156,
+    "fields": {
+        "classAttendance": 34,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-10"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 157,
+    "fields": {
+        "classAttendance": 34,
+        "status": true,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-10"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 158,
+    "fields": {
+        "classAttendance": 34,
+        "status": true,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-10"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 159,
+    "fields": {
+        "classAttendance": 34,
+        "status": true,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-10"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 160,
+    "fields": {
+        "classAttendance": 34,
+        "status": true,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-10"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 161,
+    "fields": {
+        "classAttendance": 35,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-11"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 162,
+    "fields": {
+        "classAttendance": 35,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-11"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 163,
+    "fields": {
+        "classAttendance": 35,
+        "status": true,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-11"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 164,
+    "fields": {
+        "classAttendance": 35,
+        "status": false,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-11"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 165,
+    "fields": {
+        "classAttendance": 35,
+        "status": false,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-11"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 166,
+    "fields": {
+        "classAttendance": 35,
+        "status": false,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-11"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 167,
+    "fields": {
+        "classAttendance": 36,
+        "status": true,
+        "student": 2,
+        "module": 1,
+        "created": "2022-09-12"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 168,
+    "fields": {
+        "classAttendance": 36,
+        "status": true,
+        "student": 3,
+        "module": 1,
+        "created": "2022-09-12"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 169,
+    "fields": {
+        "classAttendance": 36,
+        "status": true,
+        "student": 4,
+        "module": 1,
+        "created": "2022-09-12"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 170,
+    "fields": {
+        "classAttendance": 36,
+        "status": true,
+        "student": 6,
+        "module": 1,
+        "created": "2022-09-12"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 171,
+    "fields": {
+        "classAttendance": 36,
+        "status": false,
+        "student": 7,
+        "module": 1,
+        "created": "2022-09-12"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 172,
+    "fields": {
+        "classAttendance": 36,
+        "status": false,
+        "student": 12,
+        "module": 1,
+        "created": "2022-09-12"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 173,
+    "fields": {
+        "classAttendance": 37,
+        "status": false,
+        "student": 2,
+        "module": 2,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 174,
+    "fields": {
+        "classAttendance": 37,
+        "status": false,
+        "student": 3,
+        "module": 2,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 175,
+    "fields": {
+        "classAttendance": 37,
+        "status": false,
+        "student": 4,
+        "module": 2,
+        "created": "2022-09-04"
+    }
+},
+{
+    "model": "module.attendence",
+    "pk": 176,
+    "fields": {
+        "classAttendance": 37,
+        "status": false,
+        "student": 6,
+        "module": 2,
+        "created": "2022-09-04"
+    }
+}
+]

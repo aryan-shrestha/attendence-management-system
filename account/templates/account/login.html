@@ -1,0 +1,30 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1 style="text-align: center; font-size: 28px">Login</h1>
+    <div class="form-container" style="width: 40%; margin:20px auto;">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
+                <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <input type="submit" value="Login" class="btn btn-outline-success btn-large" style="margin-top: 20px;">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

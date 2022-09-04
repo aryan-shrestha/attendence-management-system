@@ -1,0 +1,27 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+    <h1 style="font-size: 28px; text-align:center;">Hello, {{request.user.first_name}}</h1>
+    <div class="form-container" style="width: 50%; margin: 20px auto; ">
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert" style="margin-top: 20px;">
+                {{message}}
+            </div>
+        {% endfor %}
+        <form action="" method="POST"> 
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">{{field.label}}</label>
+                {{field}}
+            </div>
+            {% endfor %}
+            <input type="submit" value="Update" class="btn btn-outline-success btn-large" style="margin-top: 20px;">
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
