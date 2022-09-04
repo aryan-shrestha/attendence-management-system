@@ -37,7 +37,7 @@ const getData = (timeFrame) => {
     graphTitle = document.querySelector("#graphTitle");
     graphTitle.innerText = `Current ${timeFrame} report`;
 
-    axios.get(`http://127.0.0.1:8000/show_chart/${timeFrame}/`)
+    axios.get(`https://attandance-app183.herokuapp.com/show_chart/${timeFrame}/`)
         .then((res)=>{
             let label = Object.keys(res.data);
             let data = Object.values(res.data);
