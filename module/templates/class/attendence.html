@@ -49,7 +49,7 @@
             'Content-Type': 'application/json',
             'X-CSRFToken': csrftoken,
         }
-        axios.post(`http://127.0.0.1:8000/attendence/${classId}`, data, {
+        axios.post(`https://attandance-app183.herokuapp.com/attendence/${classId}`, data, {
             headers: headers,
         })
         .then((res)=>{
